@@ -9,6 +9,7 @@ export default function Register() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  const API_BASE_URL = "https://x882lr-5000.csb.app";
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -19,7 +20,7 @@ export default function Register() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/register", {
+      const response = await fetch(`${API_BASE_URL}/api/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, username, password }),

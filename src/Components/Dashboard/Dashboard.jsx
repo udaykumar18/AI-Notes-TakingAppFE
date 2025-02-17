@@ -16,7 +16,7 @@ import { useTheme } from "../../context/ThemeContext";
 
 import NoteModal from "./NoteModal";
 
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://x882lr-5000.csb.app";
 
 export default function Dashboard() {
   const [notes, setNotes] = useState([]);
